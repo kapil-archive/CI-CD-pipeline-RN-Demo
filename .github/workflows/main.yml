@@ -44,7 +44,7 @@ jobs:
       # 6️⃣ Decode keystore
       - name: Decode keystore
         run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > android/app/my-release-key.keystore
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/my-release-key.keystore
 
       # 7️⃣ Setup signing properties
       - name: Configure signing
